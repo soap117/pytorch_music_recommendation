@@ -2,7 +2,7 @@
 personal experiment staff
 ## Motivation
 Yet, there exsits many deep learning based music recommendation system, but they usually require supervised signal(favor list and unfavor list) or collaborative filtering, which is impractic for a normal user to apply. 
-For a ordinary user, it's most likely that you only have a favor list of songs and a lot of songs you don't know you like or not. Based on above situation, this approach is designed.
+For an ordinary user, it's most likely that you only have a favor list of songs and a lot of songs you don't know you like or not. Based on above situation, this approach is designed.
 ## Method
 ### Music2Vector
 The first step is to use unsupervised approaches to vectornize each music into a embedding space. The major idea is similar to Doc2Vec approach. For details please see the below image.
