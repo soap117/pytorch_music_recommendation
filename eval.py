@@ -22,8 +22,10 @@ if __name__ == "__main__":
     embeddings = []
     sample_rate, signal_all = scipy.io.wavfile.read(wav_file)
     if signal_all.shape[1] > 1:
+        #merge if conatins more than one channel
         signal_all = np.mean(signal_all, 1)
     for k in range(len(signal_all)//(sample_rate*30)):
+        #take mean result of all 30s pieces
         signal = signal_all[k*sample_rate*30:(k+1)*sample_rate*30]
         feature_mfcc = mfcc(signal, samplerate=sample_rate, nfft=2048, numcep=128, nfilt=128, winstep=0.03, winlen=0.03).astype(np.float32)
         feature_mfcc = torch.Tensor(feature_mfcc).cuda().view(1, 1000, 128)
