@@ -14,6 +14,7 @@ You now have a embedding space for music! Still it's not enough to build a recom
 I do not perform a quantitative research on it. But usually for a 30s music segment, its' cloest neighbors are other segments from the same song or sgements from a different version of that song. The below images shows the projector results of my embedding space.
 ![avatar](pic2.png)
 ## How to use it
+Requirements: Pytroch, python_speech_features
 create 5 directories under the branch: favor_data, favorite, general_data, togather, save256. Put your favorite songs in favorite in wav form, then put general songs(including your favorite ones) in togather. <br/>
 run data_prepare.py to generate data<br/>
 run train.py to train the model<br/>
